@@ -11,18 +11,15 @@ export default function TodoForm({ addTodo }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mb-6 flex gap-2">
+    <form onSubmit={handleSubmit} className="todo-form">
       <input
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Tambah tugas baru..."
-        className="flex-1 rounded-lg border border-slate-300 px-4 py-2 focus:border-indigo-500 focus:outline-none"
+        className="todo-input"
       />
-      <button
-        type="submit"
-        className="rounded-lg bg-indigo-600 px-4 py-2 font-semibold text-white hover:bg-indigo-700"
-      >
+      <button type="submit" className="todo-button">
         Tambah
       </button>
     </form>

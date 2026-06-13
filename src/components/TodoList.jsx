@@ -2,11 +2,11 @@ import TodoItem from './TodoItem'
 
 export default function TodoList({ todos, toggleTodo, deleteTodo }) {
   if (todos.length === 0) {
-    return <p className="text-center text-slate-500">Belum ada tugas.</p>
+    return <p className="empty-state">Belum ada tugas.</p>
   }
 
   return (
-    <ul className="space-y-3">
+    <ul className="todo-list">
       {todos.map((todo) => (
         <TodoItem
           key={todo.id}
